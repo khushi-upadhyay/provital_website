@@ -1,0 +1,66 @@
+.hero {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+  
+    &__images {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem;
+  
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+      }
+    }
+  
+    &__content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: #333;
+  
+        span {
+          color: #007aff;
+        }
+      }
+  
+      p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        color: #666;
+      }
+  
+      &__search {
+        display: flex;
+        gap: 0.5rem;
+  
+        input {
+          flex: 1;
+          padding: 0.8rem;
+          border: 1px solid #ddd;
+          border-radius: 4px;
+        }
+  
+        button {
+          padding: 0.8rem 1.5rem;
+          background-color: #007aff;
+          color: #fff;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+  
+          &:hover {
+            background-color: #005bb5;
+          }
+        }
+      }
+    }
+  }
+  
