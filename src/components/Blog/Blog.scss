@@ -1,57 +1,3 @@
-
-// .blog-container {
-//   display: flex;
-//   flex-direction: column;
-//   max-width: 400px;
-//   border-radius: 12px;
-//   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-//   overflow: hidden;
-//   background-color: #fff;
-
-//   .blog-image-section {
-//     position: relative;
-
-//     .blog-image {
-//       width: 100%;
-//       height: auto;
-//       object-fit: cover;
-//     }
-
-//     .blog-blood-pressure {
-//       position: absolute;
-//       top: 10px;
-//       left: 10px;
-//       background: rgba(255, 255, 255, 0.8);
-//       padding: 6px 12px;
-//       border-radius: 20px;
-//       font-size: 14px;
-//       display: flex;
-//       align-items: center;
-//       gap: 4px;
-
-//       .blog-heart-icon {
-//         font-size: 14px;
-//         color: red;
-//       }
-//     }
-//   }
-
-//   .blog-content {
-//     padding: 16px;
-
-//     .blog-title {
-//       font-size: 18px;
-//       font-weight: bold;
-//       margin-bottom: 8px;
-//     }
-
-//     .blog-description {
-//       font-size: 14px;
-//       color: #666;
-//       line-height: 1.5;
-//     }
-//   }
-// }
 .blog-card {
   width: 493px;
   height: 485px;
@@ -75,19 +21,30 @@
 
     .blog-blood-pressure {
       position: absolute;
-      top: 10px;
-      left: 10px;
-      background: rgba(255, 255, 255, 0.8);
-      padding: 6px 12px;
+      bottom: 24px;
+      left: 24px;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 8px 16px;
       border-radius: 20px;
       font-size: 14px;
       display: flex;
       align-items: center;
-      gap: 4px;
+      gap: 8px;
 
-      .blog-heart-icon {
-        font-size: 14px;
-        color: red;
+      .blog-icon {
+        width: 24px;
+        height: 21px;
+        object-fit: contain; /* Ensure the icon scales correctly */
+      }
+      .blog-pressure-text {
+        font-weight: bold;
+        color: #333;
+
+        span {
+          font-size: 12px;
+          vertical-align: super;
+          color: #666;
+        }
       }
     }
   }
