@@ -1,7 +1,7 @@
 // import React from "react";
 // import Blog from "./Blog";
 
-// const BlogList = () => {
+// const BlogList = ({ selectedTab }) => {
 //   const blogData = [
 //     {
 //       imageSrc: "/images/blog/blog1.png",
@@ -47,24 +47,33 @@
 //     },
 //   ];
 
+//   const rearrangedBlogs =
+//     selectedTab && selectedTab !== "All"
+//       ? [
+//           ...blogData.filter((blog) => blog.title === selectedTab),
+//           ...blogData.filter((blog) => blog.title !== selectedTab),
+//         ]
+//       : blogData;
+
 //   return (
-//     <div style={{ display: "flex", flexWrap: "wrap", gap: "24px", justifyContent: "center" }}>
-//       {blogData.map((blog, index) => (
-//         <Blog
-//           key={index}
-//           imageSrc={blog.imageSrc}
-//           iconSrc={blog.iconSrc}
-//           bloodPressure={blog.bloodPressure}
-//           title={blog.title}
-//           description={blog.description}
-//         />
-//       ))}
+//     <div className="blog-list-container">
+//       <div className="blog-list">
+//         {rearrangedBlogs.map((blog, index) => (
+//           <Blog
+//             key={index}
+//             imageSrc={blog.imageSrc}
+//             iconSrc={blog.iconSrc}
+//             bloodPressure={blog.bloodPressure}
+//             title={blog.title}
+//             description={blog.description}
+//           />
+//         ))}
+//       </div>
 //     </div>
 //   );
 // };
 
 // export default BlogList;
-
 
 import React from "react";
 import Blog from "./Blog";
@@ -115,28 +124,17 @@ const BlogList = ({ selectedTab }) => {
     },
   ];
 
-  // Filter the blog list based on the selected tab
   const rearrangedBlogs =
     selectedTab && selectedTab !== "All"
       ? [
-          ...blogData.filter((blog) => blog.title === selectedTab), // Selected blog
-          ...blogData.filter((blog) => blog.title !== selectedTab), // Rest of the blogs
+          ...blogData.filter((blog) => blog.title === selectedTab),
+          ...blogData.filter((blog) => blog.title !== selectedTab),
         ]
       : blogData;
 
   return (
-    <div style={{ position: "relative", width: "100%" }}>
-      {/* Horizontal Scroll Container */}
-      <div
-        style={{
-          display: "flex",
-          overflowX: "auto",
-          gap: "24px",
-          scrollBehavior: "smooth",
-          padding: "16px",
-        }}
-        className="blog-list"
-      >
+    <div className="blog-list-container">
+      <div className="blog-list">
         {rearrangedBlogs.map((blog, index) => (
           <Blog
             key={index}
