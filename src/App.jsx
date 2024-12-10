@@ -13,7 +13,7 @@ function App() {
       {/* <ImageCardAnimation /> */}
       {/* <Blog /> */}
       {/* < SearchComponent/> */}
-      {/* <BlogList /> */}  
+      {/* <BlogList />   */}
       <BookAppointmentPage />
       <HowItWorks />
     </div>

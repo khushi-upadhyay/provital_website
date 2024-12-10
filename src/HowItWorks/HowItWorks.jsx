@@ -2,8 +2,8 @@ import React, { useRef, useState } from "react";
 import BlogList from "../components/Blog/BlogList";
 
 const HowItWorks = () => {
-  const [selectedTab, setSelectedTab] = useState("All"); // Default to show all
-  const scrollRef = useRef(null); // Reference for horizontal scrolling
+  const [selectedTab, setSelectedTab] = useState("All"); 
+  const scrollRef = useRef(null); 
 
   const tabs = [
     "Nutrition",
@@ -50,7 +50,7 @@ const HowItWorks = () => {
               key={tab}
               style={{
                 padding: "8px 20px",
-                border: "1px solid #ccc",  // Corrected typo here
+                border: "1px solid #ccc",  
                 borderRadius: "16px",
                 backgroundColor: selectedTab === tab ? "#000" : "#fff",
                 color: selectedTab === tab ? "#fff" : "#000",

@@ -1,49 +1,21 @@
-
-// .blog-list-container {
-//   position: relative;
-//   width: 100%;
-//   overflow-x: auto; /* Horizontal scroll */
-//   overflow-y: hidden; /* No vertical scroll */
-//   white-space: nowrap; /* Keep items in a single row */
-//   padding: 16px;
-//   box-sizing: border-box;
-// }
-
-// .blog-list {
-//   display: flex;
-//   flex-direction: row; /* Align blogs horizontally */
-//   gap: 24px; /* Spacing between blogs */
-//   scroll-behavior: smooth; /* Smooth horizontal scrolling */
-// }
-
-// .blog-list::-webkit-scrollbar {
-//   height: 8px; /* Adjust scrollbar height */
-// }
-
-// .blog-list::-webkit-scrollbar-thumb {
-//   background-color: #c4c4c4;
-//   border-radius: 4px;
-// }
-
-
 .blog-list-container {
   position: relative;
   width: 100%;
-  overflow-x: auto; /* Enable horizontal scrolling */
-  overflow-y: hidden; /* Disable vertical scrolling */
-  white-space: nowrap; /* Prevent line wrapping */
+  overflow-x: auto; 
+  overflow-y: hidden; 
+  white-space: nowrap; 
   padding: 16px;
   box-sizing: border-box;
 }
 
 .blog-list {
   display: flex;
-  flex-direction: row; /* Arrange blogs side by side */
-  gap: 24px; /* Space between blog cards */
+  flex-direction: row; 
+  gap: 24px; 
 }
 
 .blog-list::-webkit-scrollbar {
-  height: 8px; /* Adjust scrollbar height */
+  height: 8px; 
 }
 
 .blog-list::-webkit-scrollbar-thumb {
@@ -52,5 +24,5 @@
 }
 
 .blog-card {
-  flex: 0 0 auto; /* Prevent cards from shrinking or growing */
+  flex: 0 0 auto; 
 }
