@@ -5,7 +5,11 @@ const SearchComponent = () => {
   return (
     <div className="search-container">
       <div className="search-field">
-        <span className="icon">🔍</span>
+      <img 
+    src="/images/search/condition.png" 
+    alt="Location Icon" 
+    style={{ width: "24px", height: "24px" }} 
+  />
         <input
           type="text"
           placeholder="Condition, procedure, specialty..."
@@ -14,7 +18,11 @@ const SearchComponent = () => {
       </div>
 
       <div className="search-field">
-        <span className="icon">📍</span>
+      <img 
+    src="/images/search/city.png" 
+    alt="Location Icon" 
+    style={{ width: "24px", height: "24px" }} 
+  />
         <input
           type="text"
           placeholder="City, state, or zipcode"
@@ -23,7 +31,11 @@ const SearchComponent = () => {
       </div>
 
       <div className="search-field">
-        <span className="icon">💳</span>
+      <img 
+    src="/images/search/insurance.png" 
+    alt="Location Icon" 
+    style={{ width: "24px", height: "24px" }} 
+  />
         <input
           type="text"
           placeholder="Insurance carrier"

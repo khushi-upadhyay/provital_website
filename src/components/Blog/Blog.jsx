@@ -10,7 +10,7 @@ const Blog = ({ imageSrc, iconSrc, bloodPressure, title, description }) => {
         <div className="blog-blood-pressure">
           <img src={iconSrc} alt="Blood Pressure Icon" className="blog-icon" />
           <span className="blog-pressure-text">
-            {bloodPressure} <span>mmHg</span>
+            {bloodPressure} <span></span>
           </span>
         </div>
       </div>

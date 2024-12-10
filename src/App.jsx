@@ -15,7 +15,7 @@ function App() {
       {/* < SearchComponent/> */}
       {/* <BlogList />   */}
       <BookAppointmentPage />
-      <HowItWorks />
+      {/* <HowItWorks /> */}
     </div>
   );
 }
