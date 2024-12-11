@@ -1,3 +1,13 @@
+## Deployments
+https://provital.khushiupadhyay.xyz
+<br />
+https://www.provital.khushiupadhyay.xyz
+<br />
+https://www.provital.vercel.app
+
+
+
+
 ## Demo
 
 ### Desktop - Book an Appointment
