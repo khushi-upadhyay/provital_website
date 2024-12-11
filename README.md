@@ -1,3 +1,28 @@
+## Demo
+
+### Desktop - Book an Appointment
+<img width="1512" alt="desktop-bookanappointment" src="https://github.com/user-attachments/assets/ba71831b-eb90-44f7-b29b-e7f677bcecef" />
+
+### Desktop - How It Works
+<img width="1512" alt="desktop-howitworks" src="https://github.com/user-attachments/assets/f7f80ade-e614-402b-a6c6-a7221c27084c" />
+
+### Mobile - Book an Appointment
+<img width="507" alt="mobile-bookanappointment" src="https://github.com/user-attachments/assets/4dc4390d-720d-493b-bd3b-f3ff85e1c939" />
+
+### Mobile - Navbar
+<img width="507" alt="mobile-navbar" src="https://github.com/user-attachments/assets/fab7dd29-c1e1-44fd-925d-1b1fdf496895" />
+
+### Mobile - How It Works
+<img width="507" alt="mobile-howitworks" src="https://github.com/user-attachments/assets/0e9e09bd-ccbb-4017-8414-95b5d6976e2c" />
+
+
+### Installation
+
+1. Clone the repository:
+   ```
+   git clone https://github.com/khushi-upadhyay/provital_website.git
+   cd provital-website
+   
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +93,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**
