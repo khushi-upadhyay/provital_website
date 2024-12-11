@@ -45,10 +45,6 @@ function App() {
   return (
     <div>
       <Header />
-      {/* <ImageCardAnimation /> */}
-      {/* <Blog /> */}
-      {/* <SearchComponent /> */}
-      {/* <BlogList /> */}
       <BookAppointmentPage />
       <hr style={hrStyle} />
       <HowItWorks />
