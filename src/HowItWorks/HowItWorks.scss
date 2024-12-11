@@ -1,20 +1,30 @@
 .how-it-works {
-  padding: 40px;
+  .how-it-works-container {
+  padding: 50px;
   background-color: #f9f9f9;
   position: relative;
+  margin-left: 50px;
+  overflow-x: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 
   .how-it-works-header {
     text-align: left; 
     color: #666;
     font-size: 16px;
     font-weight: bold;
+
+  margin-left: 50px;
+
     h2 {
-      font-size: 24px;
-      margin-bottom: 8px;
+      color: "#666"; 
+      font-size: "16px"; 
+      margin-bottom: "8px";
     }
 
     p {
-      font-size: 16px;
+      font-size: 24px;
       color: transparent;
       margin-bottom: 24px;
       background: linear-gradient(90deg, #F1CA72 0%, #D96E6C 100%); 
@@ -98,4 +108,5 @@
       flex: 0 0 500px;
     }
   }
+}
 }

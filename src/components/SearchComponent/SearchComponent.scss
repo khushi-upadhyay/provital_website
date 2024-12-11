@@ -8,13 +8,12 @@
   background-color: #f8f9fa;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  position: relative; /* Ensure it can be layered */
-  z-index: 10; /* Bring it to the front */
+  position: relative; 
 
   @media (min-width: 768px) {
-    width: 100%; /* Cover entire width on desktop */
+    width: 100%;
     flex-wrap: nowrap;
-    justify-content: space-between; /* Spread fields across the width */
+    justify-content: space-between;
   }
 }
 
@@ -30,7 +29,7 @@
   max-width: 300px;
 
   @media (min-width: 768px) {
-    max-width: none; /* Allow fields to expand equally on desktop */
+    max-width: none; 
   }
 
   img {
@@ -71,7 +70,7 @@
   }
 
   @media (min-width: 768px) {
-    flex: none; /* Prevent button from stretching on desktop */
+    flex: none; 
   }
 }
 

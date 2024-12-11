@@ -34,7 +34,7 @@ const ImageCardAnimation = () => {
     <div className="image-card-animation">
       {isDesktop && (
         <div className="frame">
-          {/* Desktop View */}
+   
           <div className="desktop-view">
             <div className="column move-up">
               {column1Images.map((image, index) => (
@@ -54,7 +54,7 @@ const ImageCardAnimation = () => {
         </div>
       )}
 
-      {/* Mobile View */}
+
       {!isDesktop && (
         <div className="mobile-view">
           <div className="scroll-row">

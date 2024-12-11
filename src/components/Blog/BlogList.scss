@@ -2,16 +2,25 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 3px;  /* Reduced the gap between buttons */
-  width: 100%; /* Ensure full width */
-  padding-left: 20px; /* Added breathing space from left */
-  margin: 0 10px; 
+  gap: 10px;  
+  width: 100%;
+  padding-left: 0px;
+  padding-bottom: 15px;
+  margin: 0 0px; 
 }
 
-/* Hide category buttons and arrows on mobile */
+.arrow-btn-container {
+  display: flex;
+  justify-content: flex-end; 
+  align-items: center;       
+  gap: 10px;              
+  margin-right: 5%;
+  overflow-x: hidden;
+}
+
 @media (max-width: 768px) {
   .category-nav {
-    display: none; /* Hide the entire category-nav section */
+    display: none; 
   }
   .category-title {
     display: none;
@@ -37,8 +46,10 @@
 
 .arrow-btn-container {
   display: flex;
-  gap: 10px;  /* Space between the two arrow buttons */
-  margin-left: auto; /* Push the arrow buttons to the far right */
+  justify-content: flex-end; 
+  gap: 10px;  
+  margin-left: auto;
+
 }
 
 .arrow-btn {
@@ -63,7 +74,7 @@
   display: flex;
   overflow-x: auto;
   scroll-behavior: smooth;
-  gap: 30px;  /* Adjusted gap between items */
+  gap: 30px;
   padding: 20px 0;
 }
 

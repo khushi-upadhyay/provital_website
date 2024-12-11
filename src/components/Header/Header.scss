@@ -10,6 +10,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 9999;
 
 
   &__content {
@@ -113,17 +114,17 @@
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         border-radius: 8px;
         z-index: 10;
-        padding: 8px 0; // Add padding around the menu
+        padding: 8px 0; 
 
         .dropdown-item {
           display: flex;
           align-items: center;
           justify-content: space-between;
           padding: 8px 16px;
-          gap: 10px; // Add space between elements
-          border-bottom: 1px solid #f1f1f1; // Optional: separator between items
+          gap: 10px; 
+          border-bottom: 1px solid #f1f1f1; 
           &:last-child {
-            border-bottom: none; // Remove border for the last item
+            border-bottom: none; 
           }
 
           span {
@@ -153,7 +154,7 @@
     background-color: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 15px;
-    border-radius: 8px; /* Rounded corners */
+    border-radius: 8px; 
     z-index: 1000;
 
 
@@ -169,20 +170,20 @@
 
       .mobile-menu__submenu {
         width: 100%;
-        border: 1px solid #ddd; /* Outer border */
-        border-radius: 8px; /* Rounded corners */
-        padding: 10px; /* Space inside the submenu */
+        border: 1px solid #ddd; 
+        border-radius: 8px;
+        padding: 10px; 
         background-color: #fff;
   
         .dropdown-item {
           display: flex;
           justify-content: space-between;
           align-items: center;
-          padding: 10px 0; /* Vertical space between rows */
-          border-bottom: 1px solid #f1f1f1; /* Divider between items */
+          padding: 10px 0; 
+          border-bottom: 1px solid #f1f1f1; 
           
           &:last-child {
-            border-bottom: none; /* No border for the last item */
+            border-bottom: none; 
           }
           span {
             font-weight: 600;

@@ -3,7 +3,6 @@
   height: 625px;
   border-radius: 16px;
 
-  // Desktop View: Upward and Downward Animation
   .frame {
     width: 559px; 
     height: 625px; 
@@ -49,7 +48,6 @@
   }
 }
 
-  // Mobile View: Horizontal Card Animation (Without Scroll)
   .mobile-view {
     display: none; 
     gap: 1rem;
@@ -66,7 +64,7 @@
     .card {
       width: 150px;
       height: 200px;
-      border-radius: 10px;
+      border-radius: 15px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       flex-shrink: 0;
 
@@ -78,7 +76,6 @@
     }
   }
 
-  // Keyframes for Upward Movement (Desktop)
   @keyframes moveUp {
     0% {
       transform: translateY(0);
@@ -88,7 +85,7 @@
     }
   }
 
-  // Keyframes for Downward Movement (Desktop)
+ 
   @keyframes moveDown {
     0% {
       transform: translateY(0);
@@ -98,7 +95,6 @@
     }
   }
 
-  // Keyframes for Mobile Right-to-Left Movement (Horizontal Scroll)
   @keyframes scrollHorizontal {
     0% {
       transform: translateX(0);
@@ -108,7 +104,6 @@
     }
   }
 
-  // Media Queries for Responsiveness
   @media (max-width: 768px) {
     .desktop-view {
       display: none; 

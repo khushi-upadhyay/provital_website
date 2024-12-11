@@ -17,7 +17,7 @@ const HowItWorks = () => {
   }, []);
 
   return (
-    <div style={{ position: "relative", width: "100%" }}>
+    <div  style={{ marginLeft: "50px", position: "relative", width: "100%", overflowX:"hidden" }}>
       <div className="how-it-works-header">
         <h2 style={{ color: "#666", fontSize: "16px", fontWeight: "bold", marginBottom: "8px" }}>
           HOW IT WORKS
@@ -37,7 +37,6 @@ const HowItWorks = () => {
         </p>
       </div>
 
-      {/* Blog List */}
       <BlogList selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
     </div>
   );

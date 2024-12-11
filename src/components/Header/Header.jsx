@@ -2,16 +2,14 @@ import React, { useState, useEffect, useRef } from "react";
 import "./Header.scss";
 
 const Header = () => {
-  const [menuOpen, setMenuOpen] = useState(false); // Mobile menu toggle
-  const [dropdownOpen, setDropdownOpen] = useState(false); // Desktop dropdown toggle
-  const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false); // Mobile submenu toggle
+  const [menuOpen, setMenuOpen] = useState(false); 
+  const [dropdownOpen, setDropdownOpen] = useState(false); 
+  const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false); 
   
- //Reference
   const dropdownRef = useRef(null);
   const mobileDropdownRef = useRef(null); 
   const menuRef = useRef(null); 
 
-  // Close hamburger menu on desktop view
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
@@ -25,7 +23,7 @@ const Header = () => {
     };
   }, []);
 
-  // Close dropdowns when clicking outside
+
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -72,7 +70,6 @@ const Header = () => {
           <div className={`bar ${menuOpen ? "open" : ""}`}></div>
         </div>
 
-        {/* Desktop  */}
         <nav className="header__nav">
           <a href="#practice">List your practice</a> 
           <a href="#employers">For Employers</a> 
@@ -81,7 +78,7 @@ const Header = () => {
           <a href="#speakers">Speakers</a> 
           <a href="#doctors">Doctors</a> 
 
-          {/* Login / Signup Dropdown */}
+         
           <div
             className="header__dropdown"
             onClick={toggleDropdown}
@@ -106,10 +103,10 @@ const Header = () => {
         </nav>
       </div>
 
-      {/* Mobile Menu */}
+    
       {menuOpen && (
         <div className="header__mobile-menu" ref={menuRef}>
-          {/* Mobile Dropdown */}
+        
           <div
             className="mobile-menu__item"
             onClick={toggleMobileDropdown}

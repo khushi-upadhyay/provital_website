@@ -92,6 +92,7 @@
 .book-appointment__header h1 span {
   background: linear-gradient(90deg, #1173B3 0%, #0CB9B3 100%);
   -webkit-background-clip: text; 
+  background-clip: text; 
   color: transparent; 
 }
 

@@ -14,8 +14,7 @@ const Blog = ({ imageSrc, iconSrc, bloodPressure, title, description }) => {
           </span>
         </div>
       </div>
-
-     
+ 
       <div className="blog-text-section">
         <h3 className="blog-title">{title}</h3>
         <p className="blog-description">{description}</p>

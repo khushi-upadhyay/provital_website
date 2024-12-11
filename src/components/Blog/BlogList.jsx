@@ -71,7 +71,7 @@ const BlogList = ({ selectedTab, setSelectedTab }) => {
 
   return (
     <div className="blog-list-container">
-      {/* Category navigation with right-aligned arrows */}
+    
       <div className="category-nav">
         {blogData.map((blog, index) => (
           <button
@@ -86,22 +86,19 @@ const BlogList = ({ selectedTab, setSelectedTab }) => {
           </button>
         ))}
 
-        {/* Arrow buttons moved to the right */}
-        <button
-          onClick={() => handleScroll("left")}
-          className="arrow-btn left"
-        >
-          &#8592;
-        </button>
-        <button
-          onClick={() => handleScroll("right")}
-          className="arrow-btn right"
-        >
-          &#8594;
-        </button>
+       
+        <div class="arrow-btn-container">
+  <button onClick={() => handleScroll("left")} className="arrow-btn left">
+    &#8592;
+  </button>
+  <button onClick={() => handleScroll("right")} className="arrow-btn right">
+    &#8594;
+  </button>
+</div>
+
       </div>
 
-      {/* Blog list with category-based smooth scrolling */}
+      
       <div
         className="blog-list"
         ref={scrollRef}
@@ -109,7 +106,7 @@ const BlogList = ({ selectedTab, setSelectedTab }) => {
         {blogData.map((blog, index) => (
           <div
             key={index}
-            id={blog.title}  // Adding ID for scroll reference
+            id={blog.title}  
             className="blog-item"
           >
             <Blog
