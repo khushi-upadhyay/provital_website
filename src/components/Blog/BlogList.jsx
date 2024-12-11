@@ -1,8 +1,9 @@
-import React from "react";
-import "./BlogList.scss";
-import Blog from "./Blog"
 
-const BlogList = ({ selectedTab }) => {
+import React, { useRef } from "react";
+import "./BlogList.scss";
+import Blog from "./Blog";
+
+const BlogList = ({ selectedTab, setSelectedTab }) => {
   const blogData = [
     {
       imageSrc: "/images/blog/blog1.png",
@@ -48,26 +49,77 @@ const BlogList = ({ selectedTab }) => {
     },
   ];
 
-  const rearrangedBlogs =
-    selectedTab && selectedTab !== "All"
-      ? [
-          ...blogData.filter((blog) => blog.title === selectedTab),
-          ...blogData.filter((blog) => blog.title !== selectedTab),
-        ]
-      : blogData;
+  const scrollRef = useRef();
+
+  const handleScroll = (direction) => {
+    if (scrollRef.current) {
+      const scrollAmount = 300;
+      if (direction === "left") {
+        scrollRef.current.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+      } else if (direction === "right") {
+        scrollRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
+      }
+    }
+  };
+
+  const scrollToCategory = (category) => {
+    const categoryElement = document.getElementById(category);
+    if (categoryElement) {
+      categoryElement.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <div className="blog-list-container">
-      <div className="blog-list">
-        {rearrangedBlogs.map((blog, index) => (
-          <Blog
+      {/* Category navigation with right-aligned arrows */}
+      <div className="category-nav">
+        {blogData.map((blog, index) => (
+          <button
             key={index}
-            imageSrc={blog.imageSrc}
-            iconSrc={blog.iconSrc}
-            bloodPressure={blog.bloodPressure}
-            title={blog.title}
-            description={blog.description}
-          />
+            onClick={() => {
+              setSelectedTab(blog.title);
+              scrollToCategory(blog.title);
+            }}
+            className={`category-title ${selectedTab === blog.title ? "active" : ""}`}
+          >
+            {blog.title}
+          </button>
+        ))}
+
+        {/* Arrow buttons moved to the right */}
+        <button
+          onClick={() => handleScroll("left")}
+          className="arrow-btn left"
+        >
+          &#8592;
+        </button>
+        <button
+          onClick={() => handleScroll("right")}
+          className="arrow-btn right"
+        >
+          &#8594;
+        </button>
+      </div>
+
+      {/* Blog list with category-based smooth scrolling */}
+      <div
+        className="blog-list"
+        ref={scrollRef}
+      >
+        {blogData.map((blog, index) => (
+          <div
+            key={index}
+            id={blog.title}  // Adding ID for scroll reference
+            className="blog-item"
+          >
+            <Blog
+              imageSrc={blog.imageSrc}
+              iconSrc={blog.iconSrc}
+              bloodPressure={blog.bloodPressure}
+              title={blog.title}
+              description={blog.description}
+            />
+          </div>
         ))}
       </div>
     </div>

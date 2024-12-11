@@ -14,8 +14,8 @@ function App() {
       {/* <Blog /> */}
       {/* < SearchComponent/> */}
       {/* <BlogList />   */}
-      <BookAppointmentPage />
-      {/* <HowItWorks /> */}
+      {/* <BookAppointmentPage /> */}
+      <HowItWorks />
     </div>
   );
 }

@@ -1,28 +1,74 @@
+.category-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 3px;  /* Reduced the gap between buttons */
+  width: 100%; /* Ensure full width */
+  padding-left: 20px; /* Added breathing space from left */
+  margin: 0 10px; 
+}
+
+/* Hide category buttons and arrows on mobile */
+@media (max-width: 768px) {
+  .category-nav {
+    display: none; /* Hide the entire category-nav section */
+  }
+  .category-title {
+    display: none;
+  }
+  .arrow-btn {
+    display: none;
+  }
+}
+
+.category-title {
+  padding: 10px 20px;
+  background-color: white;
+  border: 1px solid #000;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.category-title.active {
+  background-color: #000;
+  color: white;
+}
+
+.arrow-btn-container {
+  display: flex;
+  gap: 10px;  /* Space between the two arrow buttons */
+  margin-left: auto; /* Push the arrow buttons to the far right */
+}
+
+.arrow-btn {
+  background-color: white;
+  border: 1px solid #000;
+  color: black;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.arrow-btn:hover {
+  background-color: #f1f1f1;
+}
+
 .blog-list-container {
   position: relative;
-  width: 100%;
-  overflow-x: auto; 
-  overflow-y: hidden; 
-  white-space: nowrap; 
-  padding: 16px;
-  box-sizing: border-box;
 }
 
 .blog-list {
   display: flex;
-  flex-direction: row; 
-  gap: 24px; 
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 30px;  /* Adjusted gap between items */
+  padding: 20px 0;
 }
 
-.blog-list::-webkit-scrollbar {
-  height: 8px; 
+.blog-item {
+  min-width: 300px;
+  flex-shrink: 0;
 }
 
-.blog-list::-webkit-scrollbar-thumb {
-  background-color: #c4c4c4;
-  border-radius: 4px;
-}
-
-.blog-card {
-  flex: 0 0 auto; 
-}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./ImageCardAnimation.scss";
 
 const ImageCardAnimation = () => {
@@ -13,32 +13,49 @@ const ImageCardAnimation = () => {
     "/images/ImageCard/image8.jpeg",
   ];
 
-  const column1Images = [...images.slice(0, 4), ...images.slice(0, 4)]; // Duplicated images for column 1
-  const column2Images = [...images.slice(4, 8), ...images.slice(4, 8)]; // Duplicated images for column 2
-  const mobileImages = [...images, ...images]; // Duplicated for seamless horizontal scrolling
+  const column1Images = [...images.slice(0, 4), ...images.slice(0, 4)]; 
+  const column2Images = [...images.slice(4, 8), ...images.slice(4, 8)]; 
+  const mobileImages = [...images, ...images]; 
+
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const updateView = () => {
+      setIsDesktop(window.innerWidth > 768); 
+    };
+
+    updateView(); 
+    window.addEventListener("resize", updateView); 
+
+    return () => window.removeEventListener("resize", updateView);
+  }, []);
 
   return (
     <div className="image-card-animation">
-      <div className="frame">
-        {/* Desktop View */}
-        <div className="desktop-view">
-          <div className="column move-up">
-            {column1Images.map((image, index) => (
-              <div className="card" key={`up-${index}`}>
-                <img src={image} alt={`Image Up ${index + 1}`} />
-              </div>
-            ))}
-          </div>
-          <div className="column move-down">
-            {column2Images.map((image, index) => (
-              <div className="card" key={`down-${index}`}>
-                <img src={image} alt={`Image Down ${index + 1}`} />
-              </div>
-            ))}
+      {isDesktop && (
+        <div className="frame">
+          {/* Desktop View */}
+          <div className="desktop-view">
+            <div className="column move-up">
+              {column1Images.map((image, index) => (
+                <div className="card" key={`up-${index}`}>
+                  <img src={image} alt={`Image Up ${index + 1}`} />
+                </div>
+              ))}
+            </div>
+            <div className="column move-down">
+              {column2Images.map((image, index) => (
+                <div className="card" key={`down-${index}`}>
+                  <img src={image} alt={`Image Down ${index + 1}`} />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
+      )}
 
-        {/* Mobile View */}
+      {/* Mobile View */}
+      {!isDesktop && (
         <div className="mobile-view">
           <div className="scroll-row">
             {mobileImages.map((image, index) => (
@@ -48,7 +65,7 @@ const ImageCardAnimation = () => {
             ))}
           </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };

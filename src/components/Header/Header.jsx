@@ -74,12 +74,12 @@ const Header = () => {
 
         {/* Desktop  */}
         <nav className="header__nav">
-          <a href="#practice">List your practice</a> |
-          <a href="#employers">For Employers</a> |
-          <a href="#courses">Courses</a> |
-          <a href="#books">Books</a> |
-          <a href="#speakers">Speakers</a> |
-          <a href="#doctors">Doctors</a> |
+          <a href="#practice">List your practice</a> 
+          <a href="#employers">For Employers</a> 
+          <a href="#courses">Courses</a>
+          <a href="#books">Books</a> 
+          <a href="#speakers">Speakers</a> 
+          <a href="#doctors">Doctors</a> 
 
           {/* Login / Signup Dropdown */}
           <div
@@ -94,11 +94,11 @@ const Header = () => {
               <div className="header__dropdown-menu">
                 <div className="dropdown-item">
                   <span>Doctor</span>
-                  <a href="#doctor-login">Login</a> | <a href="#doctor-signup">Signup</a>
+                  <a href="#doctor-login">Login</a>  <a href="#doctor-signup">Signup</a>
                 </div>
                 <div className="dropdown-item">
                   <span>Patient</span>
-                  <a href="#patient-login">Login</a> | <a href="#patient-signup">Signup</a>
+                  <a href="#patient-login">Login</a>  <a href="#patient-signup">Signup</a>
                 </div>
               </div>
             )}

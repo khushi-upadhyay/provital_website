@@ -3,23 +3,29 @@ import ImageCardAnimation from "../components/ImageCardAnimation/ImageCardAnimat
 import SearchComponent from "../components/SearchComponent/SearchComponent";
 import "./BookAppointmentPage.scss";
 
+
 const BookAppointmentPage = () => {
   return (
-    <div className="book-appointment">
-      {/* Left Section */}
-      <div className="book-appointment__images">
-        <ImageCardAnimation direction="desktop" />
-      </div>
-
-      {/* Right Section  */}
-      <div className="book-appointment__right">
-        <div className="book-appointment__header">
-          <h1>
-            Book an appointment with <span>lifestyle medicine</span> experts
-          </h1>
-          <p>Optimize your lifestyle and reverse chronic diseases.</p>
+    <div className="book-appointment-page">
+      {/* Main Content */}
+      <div className="book-appointment">
+        {/* Left Section */}
+        <div className="book-appointment__images">
+          <ImageCardAnimation direction="desktop" />
         </div>
-        <div className="book-appointment__search">
+
+        {/* Right Section */}
+        <div className="book-appointment__right">
+          <div className="book-appointment__header">
+            <h1>
+              Book an appointment with <span>lifestyle medicine</span> experts
+            </h1>
+            <p>Optimize your lifestyle and reverse chronic diseases.</p>
+          </div>
+        </div>
+
+        {/* Search Section */}
+        <div className="search-section">
           <SearchComponent />
         </div>
       </div>

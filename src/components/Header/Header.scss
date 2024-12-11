@@ -1,4 +1,8 @@
 .header{
+  position: sticky;
+  top: 0; 
+  z-index: 100; 
+
   width: 100%;
   height: 80px;
   background-color: #f8f9fa;
@@ -6,7 +10,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
+
 
   &__content {
     width: 90%;
@@ -62,6 +66,7 @@
     gap: 20px;
 
     a {
+      position:relative;
       font-size: 1rem;
       font-weight: 600;
       color: #333;
@@ -74,11 +79,25 @@
         background-color: #e9ecef;
         color: #007bff;
       }
+      &:not(:last-child)::after {
+        content: "|";
+        position: absolute;
+        right: -12px; // Position separator to the right of the text
+        color: #ddd;
+      }
     }
 
     .header__dropdown {
       position: relative;
       cursor: pointer;
+      display:flex;
+      padding: 8px 0; // Match padding with other links
+      font-size: 1rem;
+      font-weight: 600;
+      color: #333;
+      text-decoration: none;
+      cursor: pointer;
+
 
       .dropdown-arrow {
         margin-left: 5px;
@@ -87,18 +106,25 @@
 
       &-menu {
         position: absolute;
-        top: 50px;
+        top: calc(100% + 8px); 
         right: 0;
         background: #fff;
         border: 1px solid #ddd;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         border-radius: 8px;
         z-index: 10;
+        padding: 8px 0; // Add padding around the menu
 
         .dropdown-item {
           display: flex;
+          align-items: center;
           justify-content: space-between;
           padding: 8px 16px;
+          gap: 10px; // Add space between elements
+          border-bottom: 1px solid #f1f1f1; // Optional: separator between items
+          &:last-child {
+            border-bottom: none; // Remove border for the last item
+          }
 
           span {
             font-weight: 600;
@@ -126,30 +152,38 @@
     width: 100%;
     background-color: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    padding: 15px;
+    border-radius: 8px; /* Rounded corners */
     z-index: 1000;
 
-    .mobile-menu__item {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 0;
-      border-bottom: 1px solid #ddd;
-      cursor: pointer;
 
+     .mobile-menu__item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    cursor: pointer;
       .dropdown-arrow {
         margin-left: 5px;
         font-size: 12px;
       }
 
       .mobile-menu__submenu {
-        margin-top: 10px;
-
+        width: 100%;
+        border: 1px solid #ddd; /* Outer border */
+        border-radius: 8px; /* Rounded corners */
+        padding: 10px; /* Space inside the submenu */
+        background-color: #fff;
+  
         .dropdown-item {
           display: flex;
           justify-content: space-between;
-          padding: 8px 16px;
-
+          align-items: center;
+          padding: 10px 0; /* Vertical space between rows */
+          border-bottom: 1px solid #f1f1f1; /* Divider between items */
+          
+          &:last-child {
+            border-bottom: none; /* No border for the last item */
+          }
           span {
             font-weight: 600;
             color: #333;
@@ -159,6 +193,7 @@
             text-decoration: none;
             color: #007aff;
             font-weight: 500;
+            margin-left: 10px;
 
             &:hover {
               text-decoration: underline;

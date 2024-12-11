@@ -1,85 +1,101 @@
 .how-it-works {
-    padding: 40px;
-    background-color: #f9f9f9;
-  
-    .how-it-works-header {
-      text-align: left;
-      text-align: center;
-      color: #666;
+  padding: 40px;
+  background-color: #f9f9f9;
+  position: relative;
+
+  .how-it-works-header {
+    text-align: left; 
+    color: #666;
+    font-size: 16px;
+    font-weight: bold;
+    h2 {
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+
+    p {
       font-size: 16px;
-      font-weight: bold;
-  
-      h2 {
-        font-size: 24px;
-        margin-bottom: 8px;
-      }
-  
-      p {
-        font-size: 16px;
-        color: #ff7e5f;
-        margin-bottom: 24px;
-      }
-  
-      .tabs {
-        display: flex;
-        justify-content: flex-start;
-        gap: 16px;
-        margin-bottom: 24px;
-  
-        .tab-button {
-          padding: 8px 16px;
-          border: none;
-          background-color: #e0e0e0;
-          border-radius: 16px;
-          cursor: pointer;
-          font-size: 14px;
-          transition: background-color 0.3s ease;
-  
-          &.active {
-            background-color: #000000;
-            color: white;
-          }
-  
-          &:hover {
-            background-color: #cce4ff;
-          }
+      color: transparent;
+      margin-bottom: 24px;
+      background: linear-gradient(90deg, #F1CA72 0%, #D96E6C 100%); 
+      -webkit-background-clip: text; 
+      background-clip: text; 
+    }
+    
+
+    .tabs {
+      display: flex;
+      justify-content: flex-start;
+      gap: 16px;
+      margin-bottom: 24px;
+
+      .tab-button {
+        padding: 8px 16px;
+        border: none;
+        background-color: #e0e0e0;
+        border-radius: 16px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: background-color 0.3s ease;
+
+        &.active {
+          background-color: #000000;
+          color: white;
         }
-      }
-  
-      .navigation-buttons {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        gap: 8px;
-  
-        .arrow-button {
-          width: 40px;
-          height: 40px;
-          border-radius: 50%;
-          border: 1px solid #ccc;
-          background-color: white;
-          cursor: pointer;
-          font-size: 20px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-  
-          &:hover {
-            background-color: #f1f1f1;
-          }
+
+        &:hover {
+          background-color: #cce4ff;
         }
       }
     }
-  
-    .blog-cards-container {
+
+    .navigation-buttons {
       display: flex;
-      overflow-x: auto;
-      scroll-behavior: smooth;
-      gap: 16px;
-  
-      .blog-card-wrapper {
-        flex: 0 0 500px; 
+      align-items: center;
+      justify-content: flex-end;
+      gap: 8px;
+
+      .arrow-button {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 1px solid #ccc;
+        background-color: white;
+        cursor: pointer;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+          background-color: #f1f1f1;
+        }
       }
     }
   }
-  
+
+  @media (max-width: 768px) {
+    .how-it-works-header {
+      text-align: center; 
+    }
+
+    .how-it-works-header h2 {
+      text-align: center;
+    }
+
+    .how-it-works-header p {
+      text-align: center;
+    }
+  }
+
+  .blog-cards-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 16px;
+
+    .blog-card-wrapper {
+      flex: 0 0 500px;
+    }
+  }
+}
